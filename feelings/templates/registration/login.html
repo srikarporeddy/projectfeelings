@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% load bootstrap3 %}
+
+{% block title %} login |{{ block.super }}{% endblock %}
+
+{% block content %}
+
+    <div class="container pt" >
+    <div class="row">
+        <div class="col-md-6">
+            <h2> Login!</h2>
+            <form action="" method="post">
+        {% bootstrap_form form %}
+            {% csrf_token %}
+                <input type="submit" value="login" class="btn btn-primary">
+                </form>
+        </div>
+<div class="col-md-6">
+    <h2> Record how u r feeling today</h2>
+    <p> “The best and most beautiful things in the world cannot be seen or even touched. They must be felt with the heart”
+― Helen Keller</p>
+</div>
+    </div>
+    </div>
+{% endblock %}
